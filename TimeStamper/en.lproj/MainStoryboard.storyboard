@@ -78,7 +78,7 @@
                                 </state>
                             </button>
                             <connections>
-                                <action selector="helpButtonTapped:" destination="Yi9-nM-glW" id="da5-Qk-2q4"/>
+                                <action selector="helpButtonTapped:" destination="Yi9-nM-glW" id="n1j-rB-fzr"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Rfc-th-qc5">
@@ -362,52 +362,6 @@
         <image name="Paper-3.png" width="500" height="500"/>
         <image name="camera.png" width="128" height="128"/>
     </resources>
-    <classes>
-        <class className="EventView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EventView.h"/>
-            <relationships>
-                <relationship kind="outlet" name="myController" candidateClass="EventViewController"/>
-                <relationship kind="outlet" name="nodeTable" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="EventViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EventViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addNodeButtonPressed:"/>
-                <relationship kind="action" name="menuButtonPressed:"/>
-                <relationship kind="outlet" name="initialDateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="initialTimeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="myView" candidateClass="EventView"/>
-                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="EventsTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EventsTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="helpButtonTapped:"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="NodeDetailView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NodeDetailView.h"/>
-            <relationships>
-                <relationship kind="outlet" name="myController" candidateClass="NodeDetailViewController"/>
-                <relationship kind="outlet" name="notesView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="photoView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="timeLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="NodeDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NodeDetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="imageViewTapped:"/>
-                <relationship kind="outlet" name="myView" candidateClass="NodeDetailView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

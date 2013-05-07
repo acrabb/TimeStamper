@@ -103,6 +103,12 @@ const unsigned char SpeechKitApplicationKey[] = {0x47, 0x59, 0xd7, 0xbf, 0xe9,
     [self.myView updateTable];
     NSLog(@">>> Event View Loaded");
     
+//    self.myView.nodeTable.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Paper-3.png"]];
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Paper-3.png"]];
+    self.myView.nodeTable.backgroundView = imageView;
+    
+    
     if (self.myEvent.nodes.count == 1) {
         // Show alert to explain what's going on.
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Event started!"
@@ -224,6 +230,28 @@ const unsigned char SpeechKitApplicationKey[] = {0x47, 0x59, 0xd7, 0xbf, 0xe9,
 //    }];
 }
 
+//-------------------------------------------------------------------------------------------
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+                                            forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete the row from the data source
+        NSLog(@"Deleting row: %d", indexPath.row);
+        [self.myEvent.nodes removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        NSLog(@"DELETED");
+    }
+    else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }   
+}
+
+
+
+
+
+//-------------------------------------------------------------------------------------------
 /*
 - (void)showPevious{ //Of:(NSIndexPath *)oldIndexPath {
     // TODO How to? :(

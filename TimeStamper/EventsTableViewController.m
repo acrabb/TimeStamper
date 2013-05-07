@@ -37,6 +37,9 @@ NSString *detail;
     self.myModel = [TSModel sharedInstance];
     [self.myModel setUp];
     
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Paper-1.png"]];
+    self.tableView.backgroundView = imageView;
+    
 //    NSLog(@"Loaded with events %@", [self.myModel.events description]);
     
     // Uncomment the following line to preserve selection between presentations.
@@ -90,14 +93,12 @@ NSString *detail;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];// forIndexPath:indexPath];
     
     // Configure the cell...
-//    EventNode *node = [self.myEvent.nodes objectAtIndex:indexPath.row];
     EventModel *event = [self.myModel.events objectAtIndex:indexPath.row];
     [cell.textLabel setText:[NSString stringWithFormat:@"%@", event.name]];
     
     [dateFormatter setDateStyle:NSDateFormatterShortStyle];
     [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
     detail = [dateFormatter stringFromDate:event.dateStarted];
-//    [self.initialDateLabel setText:[self.dateFormatter stringFromDate:self.myEvent.dateStarted]];
     [cell.detailTextLabel setText:detail];//[NSString stringWithFormat:@"%d min", min]];
     
     return cell;
@@ -165,6 +166,12 @@ NSString *detail;
 
 - (IBAction)helpButtonTapped:(id)sender {
     NSLog(@"Help button tapped!");
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Remem"
+                                                    message:@"Remember things"
+                                                   delegate:nil
+                                          cancelButtonTitle:@"Start remembering!"
+                                          otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 
