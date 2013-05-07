@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6542F18317178D9000A177F3 /* NodeDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6542F18217178D9000A177F3 /* NodeDetailView.m */; };
+		6544C66B172915B4000E2A8F /* EventsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6544C66A172915B4000E2A8F /* EventsTableViewController.m */; };
+		655301F41738B8C20096C9D0 /* Paper-10.png in Resources */ = {isa = PBXBuildFile; fileRef = 655301F11738B8C20096C9D0 /* Paper-10.png */; };
+		655301F51738B8C20096C9D0 /* Paper-12.png in Resources */ = {isa = PBXBuildFile; fileRef = 655301F21738B8C20096C9D0 /* Paper-12.png */; };
+		655301F61738B8C20096C9D0 /* Paper-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 655301F31738B8C20096C9D0 /* Paper-24.png */; };
+		655301F91738B91A0096C9D0 /* Paper-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 655301F81738B91A0096C9D0 /* Paper-3.png */; };
+		6570906817334FB300332560 /* Vintage_Paper_Background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6570906717334FB300332560 /* Vintage_Paper_Background.jpg */; };
+		6571FC931714FB4E0054085C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6571FC921714FB4E0054085C /* UIKit.framework */; };
+		6571FC951714FB4E0054085C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6571FC941714FB4E0054085C /* Foundation.framework */; };
+		6571FC971714FB4E0054085C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6571FC961714FB4E0054085C /* CoreGraphics.framework */; };
+		6571FC9D1714FB4E0054085C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6571FC9B1714FB4E0054085C /* InfoPlist.strings */; };
+		6571FC9F1714FB4E0054085C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6571FC9E1714FB4E0054085C /* main.m */; };
+		6571FCA31714FB4F0054085C /* TSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6571FCA21714FB4F0054085C /* TSAppDelegate.m */; };
+		6571FCA51714FB4F0054085C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6571FCA41714FB4F0054085C /* Default.png */; };
+		6571FCA71714FB4F0054085C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6571FCA61714FB4F0054085C /* Default@2x.png */; };
+		6571FCA91714FB4F0054085C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6571FCA81714FB4F0054085C /* Default-568h@2x.png */; };
+		6571FCAC1714FB4F0054085C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6571FCAA1714FB4F0054085C /* MainStoryboard.storyboard */; };
+		6571FCAF1714FB4F0054085C /* TSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6571FCAE1714FB4F0054085C /* TSViewController.m */; };
+		6571FCB71714FB4F0054085C /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6571FCB61714FB4F0054085C /* SenTestingKit.framework */; };
+		6571FCB81714FB4F0054085C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6571FC921714FB4E0054085C /* UIKit.framework */; };
+		6571FCB91714FB4F0054085C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6571FC941714FB4E0054085C /* Foundation.framework */; };
+		6571FCC11714FB4F0054085C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6571FCBF1714FB4F0054085C /* InfoPlist.strings */; };
+		6571FCC41714FB4F0054085C /* TimeStamperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6571FCC31714FB4F0054085C /* TimeStamperTests.m */; };
+		6571FCD91714FB780054085C /* TSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6571FCCE1714FB780054085C /* TSModel.m */; };
+		6571FCDA1714FB780054085C /* EventModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6571FCD01714FB780054085C /* EventModel.m */; };
+		6571FCDB1714FB780054085C /* EventNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6571FCD21714FB780054085C /* EventNode.m */; };
+		6571FCDC1714FB780054085C /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6571FCD41714FB780054085C /* EventViewController.m */; };
+		6571FCDD1714FB780054085C /* EventView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6571FCD61714FB780054085C /* EventView.m */; };
+		6571FCDE1714FB780054085C /* NodeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6571FCD81714FB780054085C /* NodeDetailViewController.m */; };
+		6571FCE01714FB9D0054085C /* SpeechKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6571FCDF1714FB9D0054085C /* SpeechKit.framework */; };
+		6571FCE21714FBBC0054085C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6571FCE11714FBBC0054085C /* Security.framework */; };
+		6571FCE41714FBD10054085C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6571FCE31714FBD10054085C /* AudioToolbox.framework */; };
+		6571FCE61714FBD90054085C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6571FCE51714FBD90054085C /* CFNetwork.framework */; };
+		6571FCE81714FBE30054085C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6571FCE71714FBE30054085C /* AVFoundation.framework */; };
+		6571FCEA1714FBFA0054085C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6571FCE91714FBFA0054085C /* SystemConfiguration.framework */; };
+		65986992171E21E900F1C884 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 65986991171E21E900F1C884 /* camera.png */; };
+		659C338D1720D1A800E7923C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 659C338C1720D1A800E7923C /* MobileCoreServices.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6571FCBA1714FB4F0054085C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6571FC871714FB4E0054085C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6571FC8E1714FB4E0054085C;
+			remoteInfo = TimeStamper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6542F18117178D9000A177F3 /* NodeDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeDetailView.h; sourceTree = "<group>"; };
+		6542F18217178D9000A177F3 /* NodeDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeDetailView.m; sourceTree = "<group>"; };
+		6544C669172915B4000E2A8F /* EventsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsTableViewController.h; sourceTree = "<group>"; };
+		6544C66A172915B4000E2A8F /* EventsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsTableViewController.m; sourceTree = "<group>"; };
+		655301F11738B8C20096C9D0 /* Paper-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Paper-10.png"; sourceTree = "<group>"; };
+		655301F21738B8C20096C9D0 /* Paper-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Paper-12.png"; sourceTree = "<group>"; };
+		655301F31738B8C20096C9D0 /* Paper-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Paper-24.png"; sourceTree = "<group>"; };
+		655301F81738B91A0096C9D0 /* Paper-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Paper-3.png"; sourceTree = "<group>"; };
+		6570906717334FB300332560 /* Vintage_Paper_Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Vintage_Paper_Background.jpg; sourceTree = "<group>"; };
+		6571FC8F1714FB4E0054085C /* TimeStamper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeStamper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6571FC921714FB4E0054085C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6571FC941714FB4E0054085C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6571FC961714FB4E0054085C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6571FC9A1714FB4E0054085C /* TimeStamper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TimeStamper-Info.plist"; sourceTree = "<group>"; };
+		6571FC9C1714FB4E0054085C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6571FC9E1714FB4E0054085C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6571FCA01714FB4E0054085C /* TimeStamper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TimeStamper-Prefix.pch"; sourceTree = "<group>"; };
+		6571FCA11714FB4F0054085C /* TSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSAppDelegate.h; sourceTree = "<group>"; };
+		6571FCA21714FB4F0054085C /* TSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSAppDelegate.m; sourceTree = "<group>"; };
+		6571FCA41714FB4F0054085C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		6571FCA61714FB4F0054085C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		6571FCA81714FB4F0054085C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		6571FCAB1714FB4F0054085C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		6571FCAD1714FB4F0054085C /* TSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSViewController.h; sourceTree = "<group>"; };
+		6571FCAE1714FB4F0054085C /* TSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSViewController.m; sourceTree = "<group>"; };
+		6571FCB51714FB4F0054085C /* TimeStamperTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeStamperTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6571FCB61714FB4F0054085C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		6571FCBE1714FB4F0054085C /* TimeStamperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TimeStamperTests-Info.plist"; sourceTree = "<group>"; };
+		6571FCC01714FB4F0054085C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6571FCC21714FB4F0054085C /* TimeStamperTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeStamperTests.h; sourceTree = "<group>"; };
+		6571FCC31714FB4F0054085C /* TimeStamperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeStamperTests.m; sourceTree = "<group>"; };
+		6571FCCD1714FB780054085C /* TSModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSModel.h; sourceTree = "<group>"; };
+		6571FCCE1714FB780054085C /* TSModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSModel.m; sourceTree = "<group>"; };
+		6571FCCF1714FB780054085C /* EventModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventModel.h; sourceTree = "<group>"; };
+		6571FCD01714FB780054085C /* EventModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventModel.m; sourceTree = "<group>"; };
+		6571FCD11714FB780054085C /* EventNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventNode.h; sourceTree = "<group>"; };
+		6571FCD21714FB780054085C /* EventNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventNode.m; sourceTree = "<group>"; };
+		6571FCD31714FB780054085C /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViewController.h; sourceTree = "<group>"; };
+		6571FCD41714FB780054085C /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViewController.m; sourceTree = "<group>"; };
+		6571FCD51714FB780054085C /* EventView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventView.h; sourceTree = "<group>"; };
+		6571FCD61714FB780054085C /* EventView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventView.m; sourceTree = "<group>"; };
+		6571FCD71714FB780054085C /* NodeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeDetailViewController.h; sourceTree = "<group>"; };
+		6571FCD81714FB780054085C /* NodeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeDetailViewController.m; sourceTree = "<group>"; };
+		6571FCDF1714FB9D0054085C /* SpeechKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpeechKit.framework; sourceTree = "<group>"; };
+		6571FCE11714FBBC0054085C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		6571FCE31714FBD10054085C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		6571FCE51714FBD90054085C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		6571FCE71714FBE30054085C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		6571FCE91714FBFA0054085C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		65986991171E21E900F1C884 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
+		659C338C1720D1A800E7923C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6571FC8C1714FB4E0054085C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				659C338D1720D1A800E7923C /* MobileCoreServices.framework in Frameworks */,
+				6571FCEA1714FBFA0054085C /* SystemConfiguration.framework in Frameworks */,
+				6571FCE81714FBE30054085C /* AVFoundation.framework in Frameworks */,
+				6571FCE61714FBD90054085C /* CFNetwork.framework in Frameworks */,
+				6571FCE41714FBD10054085C /* AudioToolbox.framework in Frameworks */,
+				6571FCE21714FBBC0054085C /* Security.framework in Frameworks */,
+				6571FC931714FB4E0054085C /* UIKit.framework in Frameworks */,
+				6571FC951714FB4E0054085C /* Foundation.framework in Frameworks */,
+				6571FC971714FB4E0054085C /* CoreGraphics.framework in Frameworks */,
+				6571FCE01714FB9D0054085C /* SpeechKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6571FCB11714FB4F0054085C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6571FCB71714FB4F0054085C /* SenTestingKit.framework in Frameworks */,
+				6571FCB81714FB4F0054085C /* UIKit.framework in Frameworks */,
+				6571FCB91714FB4F0054085C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		655301F71738B8CE0096C9D0 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				655301F81738B91A0096C9D0 /* Paper-3.png */,
+				65986991171E21E900F1C884 /* camera.png */,
+				6570906717334FB300332560 /* Vintage_Paper_Background.jpg */,
+				655301F11738B8C20096C9D0 /* Paper-10.png */,
+				655301F21738B8C20096C9D0 /* Paper-12.png */,
+				655301F31738B8C20096C9D0 /* Paper-24.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		6571FC861714FB4E0054085C = {
+			isa = PBXGroup;
+			children = (
+				655301F71738B8CE0096C9D0 /* images */,
+				659C338C1720D1A800E7923C /* MobileCoreServices.framework */,
+				6571FC981714FB4E0054085C /* TimeStamper */,
+				6571FCBC1714FB4F0054085C /* TimeStamperTests */,
+				6571FC911714FB4E0054085C /* Frameworks */,
+				6571FC901714FB4E0054085C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6571FC901714FB4E0054085C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6571FC8F1714FB4E0054085C /* TimeStamper.app */,
+				6571FCB51714FB4F0054085C /* TimeStamperTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6571FC911714FB4E0054085C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6571FCE91714FBFA0054085C /* SystemConfiguration.framework */,
+				6571FCE71714FBE30054085C /* AVFoundation.framework */,
+				6571FCE51714FBD90054085C /* CFNetwork.framework */,
+				6571FCE31714FBD10054085C /* AudioToolbox.framework */,
+				6571FCE11714FBBC0054085C /* Security.framework */,
+				6571FCDF1714FB9D0054085C /* SpeechKit.framework */,
+				6571FC921714FB4E0054085C /* UIKit.framework */,
+				6571FC941714FB4E0054085C /* Foundation.framework */,
+				6571FC961714FB4E0054085C /* CoreGraphics.framework */,
+				6571FCB61714FB4F0054085C /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6571FC981714FB4E0054085C /* TimeStamper */ = {
+			isa = PBXGroup;
+			children = (
+				6571FCA11714FB4F0054085C /* TSAppDelegate.h */,
+				6571FCA21714FB4F0054085C /* TSAppDelegate.m */,
+				6571FCAA1714FB4F0054085C /* MainStoryboard.storyboard */,
+				6571FCAD1714FB4F0054085C /* TSViewController.h */,
+				6571FCAE1714FB4F0054085C /* TSViewController.m */,
+				6571FCCD1714FB780054085C /* TSModel.h */,
+				6571FCCE1714FB780054085C /* TSModel.m */,
+				6544C669172915B4000E2A8F /* EventsTableViewController.h */,
+				6544C66A172915B4000E2A8F /* EventsTableViewController.m */,
+				6571FCCF1714FB780054085C /* EventModel.h */,
+				6571FCD01714FB780054085C /* EventModel.m */,
+				6571FCD11714FB780054085C /* EventNode.h */,
+				6571FCD21714FB780054085C /* EventNode.m */,
+				6571FCD31714FB780054085C /* EventViewController.h */,
+				6571FCD41714FB780054085C /* EventViewController.m */,
+				6571FCD51714FB780054085C /* EventView.h */,
+				6571FCD61714FB780054085C /* EventView.m */,
+				6571FCD71714FB780054085C /* NodeDetailViewController.h */,
+				6571FCD81714FB780054085C /* NodeDetailViewController.m */,
+				6542F18117178D9000A177F3 /* NodeDetailView.h */,
+				6542F18217178D9000A177F3 /* NodeDetailView.m */,
+				6571FC991714FB4E0054085C /* Supporting Files */,
+			);
+			path = TimeStamper;
+			sourceTree = "<group>";
+		};
+		6571FC991714FB4E0054085C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6571FC9A1714FB4E0054085C /* TimeStamper-Info.plist */,
+				6571FC9B1714FB4E0054085C /* InfoPlist.strings */,
+				6571FC9E1714FB4E0054085C /* main.m */,
+				6571FCA01714FB4E0054085C /* TimeStamper-Prefix.pch */,
+				6571FCA41714FB4F0054085C /* Default.png */,
+				6571FCA61714FB4F0054085C /* Default@2x.png */,
+				6571FCA81714FB4F0054085C /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6571FCBC1714FB4F0054085C /* TimeStamperTests */ = {
+			isa = PBXGroup;
+			children = (
+				6571FCC21714FB4F0054085C /* TimeStamperTests.h */,
+				6571FCC31714FB4F0054085C /* TimeStamperTests.m */,
+				6571FCBD1714FB4F0054085C /* Supporting Files */,
+			);
+			path = TimeStamperTests;
+			sourceTree = "<group>";
+		};
+		6571FCBD1714FB4F0054085C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6571FCBE1714FB4F0054085C /* TimeStamperTests-Info.plist */,
+				6571FCBF1714FB4F0054085C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6571FC8E1714FB4E0054085C /* TimeStamper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6571FCC71714FB4F0054085C /* Build configuration list for PBXNativeTarget "TimeStamper" */;
+			buildPhases = (
+				6571FC8B1714FB4E0054085C /* Sources */,
+				6571FC8C1714FB4E0054085C /* Frameworks */,
+				6571FC8D1714FB4E0054085C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimeStamper;
+			productName = TimeStamper;
+			productReference = 6571FC8F1714FB4E0054085C /* TimeStamper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6571FCB41714FB4F0054085C /* TimeStamperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6571FCCA1714FB4F0054085C /* Build configuration list for PBXNativeTarget "TimeStamperTests" */;
+			buildPhases = (
+				6571FCB01714FB4F0054085C /* Sources */,
+				6571FCB11714FB4F0054085C /* Frameworks */,
+				6571FCB21714FB4F0054085C /* Resources */,
+				6571FCB31714FB4F0054085C /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6571FCBB1714FB4F0054085C /* PBXTargetDependency */,
+			);
+			name = TimeStamperTests;
+			productName = TimeStamperTests;
+			productReference = 6571FCB51714FB4F0054085C /* TimeStamperTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6571FC871714FB4E0054085C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TS;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Andre Crabb";
+			};
+			buildConfigurationList = 6571FC8A1714FB4E0054085C /* Build configuration list for PBXProject "TimeStamper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6571FC861714FB4E0054085C;
+			productRefGroup = 6571FC901714FB4E0054085C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6571FC8E1714FB4E0054085C /* TimeStamper */,
+				6571FCB41714FB4F0054085C /* TimeStamperTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6571FC8D1714FB4E0054085C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6571FC9D1714FB4E0054085C /* InfoPlist.strings in Resources */,
+				6571FCA51714FB4F0054085C /* Default.png in Resources */,
+				6571FCA71714FB4F0054085C /* Default@2x.png in Resources */,
+				6571FCA91714FB4F0054085C /* Default-568h@2x.png in Resources */,
+				6571FCAC1714FB4F0054085C /* MainStoryboard.storyboard in Resources */,
+				65986992171E21E900F1C884 /* camera.png in Resources */,
+				6570906817334FB300332560 /* Vintage_Paper_Background.jpg in Resources */,
+				655301F41738B8C20096C9D0 /* Paper-10.png in Resources */,
+				655301F51738B8C20096C9D0 /* Paper-12.png in Resources */,
+				655301F61738B8C20096C9D0 /* Paper-24.png in Resources */,
+				655301F91738B91A0096C9D0 /* Paper-3.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6571FCB21714FB4F0054085C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6571FCC11714FB4F0054085C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6571FCB31714FB4F0054085C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6571FC8B1714FB4E0054085C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6571FC9F1714FB4E0054085C /* main.m in Sources */,
+				6571FCA31714FB4F0054085C /* TSAppDelegate.m in Sources */,
+				6571FCAF1714FB4F0054085C /* TSViewController.m in Sources */,
+				6571FCD91714FB780054085C /* TSModel.m in Sources */,
+				6571FCDA1714FB780054085C /* EventModel.m in Sources */,
+				6571FCDB1714FB780054085C /* EventNode.m in Sources */,
+				6571FCDC1714FB780054085C /* EventViewController.m in Sources */,
+				6571FCDD1714FB780054085C /* EventView.m in Sources */,
+				6571FCDE1714FB780054085C /* NodeDetailViewController.m in Sources */,
+				6542F18317178D9000A177F3 /* NodeDetailView.m in Sources */,
+				6544C66B172915B4000E2A8F /* EventsTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6571FCB01714FB4F0054085C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6571FCC41714FB4F0054085C /* TimeStamperTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6571FCBB1714FB4F0054085C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6571FC8E1714FB4E0054085C /* TimeStamper */;
+			targetProxy = 6571FCBA1714FB4F0054085C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6571FC9B1714FB4E0054085C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6571FC9C1714FB4E0054085C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6571FCAA1714FB4F0054085C /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6571FCAB1714FB4F0054085C /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		6571FCBF1714FB4F0054085C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6571FCC01714FB4F0054085C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6571FCC51714FB4F0054085C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6571FCC61714FB4F0054085C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6571FCC81714FB4F0054085C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TimeStamper/TimeStamper-Prefix.pch";
+				INFOPLIST_FILE = "TimeStamper/TimeStamper-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6571FCC91714FB4F0054085C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TimeStamper/TimeStamper-Prefix.pch";
+				INFOPLIST_FILE = "TimeStamper/TimeStamper-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6571FCCB1714FB4F0054085C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TimeStamper.app/TimeStamper";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TimeStamper/TimeStamper-Prefix.pch";
+				INFOPLIST_FILE = "TimeStamperTests/TimeStamperTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		6571FCCC1714FB4F0054085C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TimeStamper.app/TimeStamper";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TimeStamper/TimeStamper-Prefix.pch";
+				INFOPLIST_FILE = "TimeStamperTests/TimeStamperTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6571FC8A1714FB4E0054085C /* Build configuration list for PBXProject "TimeStamper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6571FCC51714FB4F0054085C /* Debug */,
+				6571FCC61714FB4F0054085C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6571FCC71714FB4F0054085C /* Build configuration list for PBXNativeTarget "TimeStamper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6571FCC81714FB4F0054085C /* Debug */,
+				6571FCC91714FB4F0054085C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6571FCCA1714FB4F0054085C /* Build configuration list for PBXNativeTarget "TimeStamperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6571FCCB1714FB4F0054085C /* Debug */,
+				6571FCCC1714FB4F0054085C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6571FC871714FB4E0054085C /* Project object */;
+}
