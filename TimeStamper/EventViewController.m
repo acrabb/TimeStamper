@@ -30,9 +30,9 @@
 EventNode *selectedNode;
 NSIndexPath *currentIndexPath;
 NodeDetailViewController *detailController;
-const int ALERT_REC = 0;
-const int ALERT_EDIT = 1;
-const int ALERT_SPIN = 2;
+const int ALERT_REC = 1;
+const int ALERT_EDIT = 2;
+const int ALERT_SPIN = 3;
 
 const unsigned char SpeechKitApplicationKey[] = {0x47, 0x59, 0xd7, 0xbf, 0xe9,
     0x87, 0x59, 0x34, 0x56, 0xcf, 0x7b, 0x38, 0x65, 0xce, 0xe9, 0x2f, 0xc1, 0x3d,
@@ -174,36 +174,37 @@ const unsigned char SpeechKitApplicationKey[] = {0x47, 0x59, 0xd7, 0xbf, 0xe9,
     EventNode *node = [self.myEvent.nodes objectAtIndex:indexPath.row];
     [node setTimeOffset:[TSModel getTimeStringFromDate:self.myEvent.dateStarted
                                                 toDate:node.timeStamp]];
-//    int min = [node minutesOffset];
-//    [cell.detailTextLabel setText:[node getTimeOffsetString]];
     [cell.detailTextLabel setText:node.timeOffset];
     [cell.textLabel setText:node.text];
     
-//    if (indexPath.row == self.myEvent.nodes.count) {
-//        [self.myView.nodeTable scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
-//    }
     
-//    label = [[UILabel alloc] initWithFrame:CGRectZero];
+    UILabel *label = cell.textLabel;
+//    [cell sendSubviewToBack:label];
+//    [label setHidden:YES];
+    
+    label = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 4.5, 225.0f, 40)];
 //    [label setLineBreakMode:UILineBreakModeWordWrap];
+    [label setLineBreakMode:NSLineBreakByWordWrapping];
+//    [label setMinimumScaleFactor:.7];
 //    [label setMinimumFontSize:FONT_SIZE];
-//    [label setNumberOfLines:0];
-//    [label setFont:[UIFont systemFontOfSize:FONT_SIZE]];
-//    [label setTag:1];
-//    label.text = [NSString stringWithFormat:@"%@", node.text];
-     
+    [label setNumberOfLines:0];
+    [label setFont:[UIFont systemFontOfSize:FONT_SIZE]];
+    [label setTag:1];
+    label.text = [NSString stringWithFormat:@"%@", node.text];
+//    [cell addSubview:label];
     
-    /*
-    UILabel *lbl = [[UILabel alloc]initWithFrame:CGRectMake(10.0f, 4.5f, 300.0f, 20.0f)];
-    [[UILabel alloc]initwithFrame:cell.textLabel.frame];
-    [lbl setLineBreakMode:NSLineBreakByWordWrapping];
-    [lbl setNumberOfLines:0];
-    lbl.text = [NSString stringWithFormat:@"%@", node.text];
+
+//    UILabel *lbl = [[UILabel alloc]initWithFrame:CGRectMake(10.0f, 4.5f, 200.0f, 20.0f)];
+////    [[UILabel alloc]initwithFrame:cell.textLabel.frame];
+//    [lbl setLineBreakMode:NSLineBreakByWordWrapping];
+//    [lbl setNumberOfLines:0];
+//    lbl.text = [NSString stringWithFormat:@"%@", node.text];
+//    
+//    [cell.contentView addSubview:lbl];
     
-    [cell.contentView addSubview:lbl];
-    
-    [cell.textLabel setLineBreakMode:NSLineBreakByWordWrapping];
-    [cell.textLabel setNumberOfLines:0];
-    */
+//    [cell.textLabel setLineBreakMode:NSLineBreakByWordWrapping];
+//    [cell.textLabel setNumberOfLines:0];
+
     
     // Return cell.
     return cell;
@@ -216,7 +217,7 @@ const unsigned char SpeechKitApplicationKey[] = {0x47, 0x59, 0xd7, 0xbf, 0xe9,
     NSLog(@"Selected node: %@", selectedNode.text);
     
     // Go to node detail view.
-    // HANDLED BY A SEGUE IN STORYBOARD
+    // HANDLED BY A CUSTOM SEGUE IN STORYBOARD
     
     [self performSegueWithIdentifier:@"NodeDetailSegue"
                               sender:[tableView cellForRowAtIndexPath:indexPath]];
@@ -288,6 +289,7 @@ UIAlertView *alert;
 - (void)recognizerDidBeginRecording:(SKRecognizer *) recognizer {
     NSLog(@">>> Recognizer started recording!");
     
+    // Moved the following code to the button press.
 //    alert =[[UIAlertView alloc] initWithTitle:@"Listening..."
 //                                      message:nil
 //                                     delegate:self
@@ -301,7 +303,6 @@ UIAlertView *alert;
 //-------------------------------------------------------------------------------------------
 - (void)recognizerDidFinishRecording:(SKRecognizer *) recognizer {
     NSLog(@"  > Recognizer finished recording!");
-//    [alert setTitle:@"Sending..."];
     [alert dismissWithClickedButtonIndex:2 animated:YES];
     alert = [[UIAlertView alloc] initWithTitle:@"Sending..."
                                        message:nil
@@ -312,9 +313,17 @@ UIAlertView *alert;
     [alert show];
 }
 
+//-------------------------------------------------------------------------------------------
 - (void)willPresentAlertView:(UIAlertView *)alertView {
     UIActivityIndicatorView *aiv = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     switch (alertView.tag) {
+        case ALERT_REC:
+            // Resize the alert view to make room for NDEV logo.
+//            alertView.frame = CGRectMake( alertView.frame.origin.x,
+//                                         alertView.frame.origin.y,
+//                                         alertView.frame.size.width,
+//                                         alertView.frame.size.height + 20);
+            break;
         case ALERT_SPIN:
             aiv.center = CGPointMake(alert.bounds.size.width / 2, alert.bounds.size.height / 2);
             [aiv startAnimating];
@@ -345,14 +354,18 @@ UIAlertView *alert;
 //-------------------------------------------------------------------------------------------
 - (void)recognizer:(SKRecognizer *) recognizer didFinishWithError:(NSError *) error
                                                        suggestion:(NSString *) suggestion {
+    [alert dismissWithClickedButtonIndex:2 animated:YES];
     if ([error code] == SKCancelledError) {
         NSLog(@"<<< Recognizer CANCELLED!");
         // stuff
-        [alert dismissWithClickedButtonIndex:2 animated:YES];
     } else {
         NSLog(@"<<< Recognizer has errors!");
-        [alert setTitle:@"Something went wrong :("];
-        [alert setMessage:@"Do you has teh interwebz?"];
+        alert = [[UIAlertView alloc] initWithTitle:@"Something went wrong :("
+                                           message:@"Do you has teh interwebz?"
+                                          delegate:self
+                                 cancelButtonTitle:@"No..."
+                                 otherButtonTitles:nil];
+        [alert show];
     }
 }
 
@@ -372,11 +385,6 @@ UIAlertView *alert;
     }
 }
 
-
-- (void) stopRecognizer {
-    [self.recognizer stopRecording];
-}
-
 //-------------------------------------------------------------------------------------------
 - (void)handleRecognizerAlert:(int) buttonIndex {
     switch (buttonIndex) {
@@ -388,7 +396,6 @@ UIAlertView *alert;
         case 1:
             NSLog(@"> Alert Rec: Done button pressed");
             [self.recognizer stopRecording];
-//            [self stopRecognizer];
             break;
         default:
             break;
@@ -406,7 +413,6 @@ UIAlertView *alert;
             NSLog(@"> Alert Edit: Done button pressed");
             [self.myEvent setName:[[alertView textFieldAtIndex:0] text]];
             [self.titleLabel setText:self.myEvent.name];
-//            [self.myView setNeedsDisplay];
             break;
         default:
             NSLog(@"> Alert Edit: DEFAULT");
@@ -469,6 +475,7 @@ UIAlertView *alert;
                             cancelButtonTitle:@"Cancel"
                             otherButtonTitles:@"Done", nil];
     [alert setTag:ALERT_REC];
+//    [alert addSubview:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Nuancelogo_dark_144x72.png"]]];
     [alert show];
     self.recognizer = [[SKRecognizer alloc] initWithType:SKDictationRecognizerType
                                                detection:SKShortEndOfSpeechDetection

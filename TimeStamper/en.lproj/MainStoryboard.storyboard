@@ -142,15 +142,12 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZg-cT-9bc">
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="quM-e5-zL8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="39"/>
-                                <color key="tintColor" red="0.13459215399999999" green="0.67654572660000001" blue="0.69931839920000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Press to talk.">
+                                <state key="normal" title="Press to Talk" backgroundImage="rectangle_darkwhite_154x48.png">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="addNodeButtonPressed:" destination="GXl-Bo-xPC" eventType="touchUpInside" id="d7l-g6-OS4"/>
@@ -361,7 +358,54 @@
     <resources>
         <image name="Paper-3.png" width="500" height="500"/>
         <image name="camera.png" width="128" height="128"/>
+        <image name="rectangle_darkwhite_154x48.png" width="154" height="48"/>
     </resources>
+    <classes>
+        <class className="EventView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EventView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="myController" candidateClass="EventViewController"/>
+                <relationship kind="outlet" name="nodeTable" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="EventViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EventViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addNodeButtonPressed:"/>
+                <relationship kind="action" name="menuButtonPressed:"/>
+                <relationship kind="outlet" name="initialDateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="initialTimeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="myView" candidateClass="EventView"/>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="EventsTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EventsTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="helpButtonTapped:"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="NodeDetailView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NodeDetailView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="myController" candidateClass="NodeDetailViewController"/>
+                <relationship kind="outlet" name="notesView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="photoView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="timeLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NodeDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NodeDetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="imageViewTapped:"/>
+                <relationship kind="outlet" name="myView" candidateClass="NodeDetailView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -17,6 +17,7 @@
 @synthesize myModel = _myModel;
 NSDateFormatter *dateFormatter;
 NSString *detail;
+NSString *INFO_MESSAGE = @"TimeStamper is an app to remember what you did! Just push a button and talk to your device. It'll remember things for you!\n\nSpeech recognition provided by Nuance Communications, Inc.";
 
 //-------------------------------------------------------------------------------------------
 - (id)initWithStyle:(UITableViewStyle)style
@@ -39,6 +40,14 @@ NSString *detail;
     
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Paper-1.png"]];
     self.tableView.backgroundView = imageView;
+    
+    UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    [infoButton addTarget:self
+                   action:@selector(helpButtonTapped:)
+        forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *ib = [[UIBarButtonItem alloc] initWithCustomView:infoButton];
+    [self.navigationItem setLeftBarButtonItem:ib
+                                     animated:YES];
     
 //    NSLog(@"Loaded with events %@", [self.myModel.events description]);
     
@@ -166,8 +175,8 @@ NSString *detail;
 
 - (IBAction)helpButtonTapped:(id)sender {
     NSLog(@"Help button tapped!");
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Remem"
-                                                    message:@"Remember things"
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"TimeStamper"
+                                                    message:INFO_MESSAGE
                                                    delegate:nil
                                           cancelButtonTitle:@"Start remembering!"
                                           otherButtonTitles:nil, nil];
@@ -182,25 +191,8 @@ NSString *detail;
         NSLog(@">>> New event segue.");
         // Get destination view controller
         [self.myModel createNewEvent];
-        EventModel *event = self.myModel.currentEvent;
-        //        EventViewController *vc = [segue destinationViewController];
-//        [vc receiveSegueData:event];
+        // TSModel's current item is now *event
     }
-//    else if ([[segue identifier] isEqualToString:@"EventTableSegue"]) {
-//        NSLog(@">>> Event table segue.");
-        // Get destination view controller
-//        EventsTableViewController *vc = [segue destinationViewController];
-//        [vc receiveSegueData:selectedNode];
-//    }
 }
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    if ([[segue identifier] isEqualToString:@"SavedEventSegue"]) {
-//        NSLog(@">>> Saved Event segue.");
-//        NSLog([NSString stringWithFormat:@"Saved event selected: %@", self.myModel.currentEvent]);
-//        // Get destination view controller
-////        NodeDetailViewController *vc = [segue destinationViewController];
-////        [vc receiveSegueNode:selectedNode andVC:self];
-//    }
-//}
 
 @end

@@ -25,7 +25,6 @@
 		6571FCA71714FB4F0054085C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6571FCA61714FB4F0054085C /* Default@2x.png */; };
 		6571FCA91714FB4F0054085C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6571FCA81714FB4F0054085C /* Default-568h@2x.png */; };
 		6571FCAC1714FB4F0054085C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6571FCAA1714FB4F0054085C /* MainStoryboard.storyboard */; };
-		6571FCAF1714FB4F0054085C /* TSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6571FCAE1714FB4F0054085C /* TSViewController.m */; };
 		6571FCB71714FB4F0054085C /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6571FCB61714FB4F0054085C /* SenTestingKit.framework */; };
 		6571FCB81714FB4F0054085C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6571FC921714FB4E0054085C /* UIKit.framework */; };
 		6571FCB91714FB4F0054085C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6571FC941714FB4E0054085C /* Foundation.framework */; };
@@ -43,8 +42,10 @@
 		6571FCE61714FBD90054085C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6571FCE51714FBD90054085C /* CFNetwork.framework */; };
 		6571FCE81714FBE30054085C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6571FCE71714FBE30054085C /* AVFoundation.framework */; };
 		6571FCEA1714FBFA0054085C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6571FCE91714FBFA0054085C /* SystemConfiguration.framework */; };
+		657A4D9C173A651600BD560F /* rectangle_darkwhite_154x48.png in Resources */ = {isa = PBXBuildFile; fileRef = 657A4D9B173A651600BD560F /* rectangle_darkwhite_154x48.png */; };
 		65986992171E21E900F1C884 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 65986991171E21E900F1C884 /* camera.png */; };
 		659C338D1720D1A800E7923C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 659C338C1720D1A800E7923C /* MobileCoreServices.framework */; };
+		65C35730173A586B00B3DF19 /* Nuancelogo_dark_144x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 65C3572E173A586B00B3DF19 /* Nuancelogo_dark_144x72.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,8 +83,6 @@
 		6571FCA61714FB4F0054085C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		6571FCA81714FB4F0054085C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		6571FCAB1714FB4F0054085C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		6571FCAD1714FB4F0054085C /* TSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSViewController.h; sourceTree = "<group>"; };
-		6571FCAE1714FB4F0054085C /* TSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSViewController.m; sourceTree = "<group>"; };
 		6571FCB51714FB4F0054085C /* TimeStamperTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeStamperTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6571FCB61714FB4F0054085C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		6571FCBE1714FB4F0054085C /* TimeStamperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TimeStamperTests-Info.plist"; sourceTree = "<group>"; };
@@ -108,8 +107,10 @@
 		6571FCE51714FBD90054085C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		6571FCE71714FBE30054085C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		6571FCE91714FBFA0054085C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		657A4D9B173A651600BD560F /* rectangle_darkwhite_154x48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rectangle_darkwhite_154x48.png; sourceTree = "<group>"; };
 		65986991171E21E900F1C884 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		659C338C1720D1A800E7923C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		65C3572E173A586B00B3DF19 /* Nuancelogo_dark_144x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Nuancelogo_dark_144x72.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +147,8 @@
 		655301F71738B8CE0096C9D0 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				657A4D9B173A651600BD560F /* rectangle_darkwhite_154x48.png */,
+				65C3572E173A586B00B3DF19 /* Nuancelogo_dark_144x72.png */,
 				655301FE1739122B0096C9D0 /* Paper-1.png */,
 				655301FC17390CCB0096C9D0 /* Paper-4.png */,
 				655301F81738B91A0096C9D0 /* Paper-3.png */,
@@ -201,8 +204,6 @@
 				6571FCA11714FB4F0054085C /* TSAppDelegate.h */,
 				6571FCA21714FB4F0054085C /* TSAppDelegate.m */,
 				6571FCAA1714FB4F0054085C /* MainStoryboard.storyboard */,
-				6571FCAD1714FB4F0054085C /* TSViewController.h */,
-				6571FCAE1714FB4F0054085C /* TSViewController.m */,
 				6571FCCD1714FB780054085C /* TSModel.h */,
 				6571FCCE1714FB780054085C /* TSModel.m */,
 				6544C669172915B4000E2A8F /* EventsTableViewController.h */,
@@ -341,6 +342,8 @@
 				655301F91738B91A0096C9D0 /* Paper-3.png in Resources */,
 				655301FD17390CCB0096C9D0 /* Paper-4.png in Resources */,
 				655301FF1739122B0096C9D0 /* Paper-1.png in Resources */,
+				65C35730173A586B00B3DF19 /* Nuancelogo_dark_144x72.png in Resources */,
+				657A4D9C173A651600BD560F /* rectangle_darkwhite_154x48.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,7 +380,6 @@
 			files = (
 				6571FC9F1714FB4E0054085C /* main.m in Sources */,
 				6571FCA31714FB4F0054085C /* TSAppDelegate.m in Sources */,
-				6571FCAF1714FB4F0054085C /* TSViewController.m in Sources */,
 				6571FCD91714FB780054085C /* TSModel.m in Sources */,
 				6571FCDA1714FB780054085C /* EventModel.m in Sources */,
 				6571FCDB1714FB780054085C /* EventNode.m in Sources */,
