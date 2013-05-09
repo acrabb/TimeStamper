@@ -17,6 +17,7 @@
 @property (strong, nonatomic) IBOutlet UITextView               *notesView;
 @property (strong, nonatomic) IBOutlet UIImageView              *photoView;
 @property (strong, nonatomic) IBOutlet UILabel                  *timeLabel;
+@property (strong, nonatomic) IBOutlet UIToolbar                *toolbar;
 
 - (void)registerForKeyboardNotifications;
 - (void)dismissKeyboard;

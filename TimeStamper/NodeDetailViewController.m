@@ -46,34 +46,55 @@ EventViewController *prevVC;
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    // Set up gesture recognizer to tap the keyboard away.
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self.myView
                                                                           action:@selector(dismissKeyboard)];
     [self.myView addGestureRecognizer:tap];
     [self.myView registerForKeyboardNotifications];
     
-//    [self.myView.timeLabel setText:[self.node getMinutesOffsetString]];
+    // Set the time offlet label in the nav bar.
     [self.myView.timeLabel setText:[self.node timeOffset]];
-    
-    // Fill the view with node details.
-    NSLog(@">> Getting the notes of node: %@", self.node.text);
-    
-    
-    
+}
+
+- (NSArray *)setUpToolbarButtons {
+    // Set up camera button
+    UIBarButtonItem *cameraButton = [[UIBarButtonItem alloc]
+                                     initWithBarButtonSystemItem:UIBarButtonSystemItemCamera
+                                                            target:self
+                                                            action:@selector(imageViewTapped:)];
+    // Set up flexible spacer
+    UIBarButtonItem *flexSpacer = [[UIBarButtonItem alloc]
+                               initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+                                                                            target:nil
+                                                                            action:nil];
+    // Set up social button
+    UIBarButtonItem *socialButton = [[UIBarButtonItem alloc]
+                                     initWithBarButtonSystemItem:UIBarButtonSystemItemAction
+                                                            target:self
+                                                            action:@selector(socialButtonTapped:)];
+    return [[NSArray alloc] initWithObjects:cameraButton, flexSpacer, socialButton, nil];
 }
 
 //------------------------------------------------------------------------------
 - (void)viewWillAppear:(BOOL)animated {
     NSLog(@">> NODE IS: %@", self.node);
     [self.navigationController setNavigationBarHidden:NO animated:animated];
+    [self.navigationController setToolbarHidden:NO animated:animated];
+    
+    // Set the toolbar button actions.
+    [self setToolbarItems:[self setUpToolbarButtons]];
+    
+    // Popuplate notes
     NSString *note = self.node.notes;
     if (note == nil) {
         NSLog(@">> Notes are nil.");
         note = @"Notes...";
     }
+    [self.myView setNotesText:note];
+    // Popuplate image
     if (self.node.image != nil) {
-//        [self.myView.photoView setContentMode:UIViewContentModeScaleAspectFit];
         [self.myView.photoView setImage:self.node.image];
-        
         // Fix autolayout stupidness.
         float ratio = (self.myView.photoView.image.size.height/self.myView.photoView.image.size.width);
         NSLayoutConstraint *c = [NSLayoutConstraint
@@ -84,11 +105,8 @@ EventViewController *prevVC;
                                  attribute:NSLayoutAttributeWidth
                                  multiplier:ratio
                                    constant:0];
-        
         [self.myView.photoView addConstraint:c];
-        NSLog(@"NEW IMAGE FRAME height: %f", self.myView.photoView.frame.size.height);
     }
-    [self.myView setNotesText:note];
 }
 
 //------------------------------------------------------------------------------
@@ -231,6 +249,45 @@ EventViewController *prevVC;
     }
 //    [[picker parentViewController] dismissModalViewControllerAnimated: YES];
     [picker dismissViewControllerAnimated: YES completion: nil];
+}
+
+
+// ---------- SOCIAL -------------
+
+//- (IBAction)socialButtonTapped:(id)sender {
+//    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+//        SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+//        SLComposeViewControllerCompletionHandler myBlock = ^(SLComposeViewControllerResult result){
+//            if (result == SLComposeViewControllerResultCancelled) {
+//                NSLog(@"# Sharing CANCELLED");
+//            } else {
+//                NSLog(@"# Sharing DONE");
+//            }
+//            [controller dismissViewControllerAnimated:YES completion:nil];
+//        };
+//        controller.completionHandler = myBlock;
+//        
+//        // Add text to fb post value from iOS
+//        [controller setInitialText:[NSString stringWithFormat:@"%@", self.node.notes]];
+//        // Add url option
+//        [controller addImage:self.node.image];
+//        // Add image option
+//        
+//        [self presentViewController:controller animated:YES completion:nil];
+//    } else {
+//        NSLog(@"Sharing service unavailable.");
+//    }
+//}
+- (IBAction)socialButtonTapped:(id)sender {
+    NSArray *acts = [[NSArray alloc] initWithObjects:UIActivityTypePrint,
+                     UIActivityTypeCopyToPasteboard, nil];
+    UIActivityViewController *controller = [[UIActivityViewController alloc]
+                                            initWithActivityItems:[[NSArray alloc]
+                                                                   initWithObjects:self.node.image,
+                                                                        self.node.notes, nil]
+                                            applicationActivities:nil];
+//    controller.excludedActivityTypes = acts;
+    [self presentViewController:controller animated:YES completion:nil];
 }
 
 

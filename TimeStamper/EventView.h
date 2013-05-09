@@ -13,9 +13,9 @@
 
 @interface EventView : UIView
 
-@property (strong, nonatomic) IBOutlet UITableView *nodeTable;
-@property (strong, nonatomic) IBOutlet EventViewController *myController;
-@property (strong, nonatomic) NSMutableArray *nodes;
+@property (strong, nonatomic) IBOutlet UITableView          *nodeTable;
+@property (strong, nonatomic) IBOutlet EventViewController  *myController;
+@property (strong, nonatomic) NSMutableArray                *nodes;
 
 - (void) updateTable;
 

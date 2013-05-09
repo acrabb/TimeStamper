@@ -123,7 +123,26 @@ const unsigned char SpeechKitApplicationKey[] = {0x47, 0x59, 0xd7, 0xbf, 0xe9,
 
 - (void)viewWillAppear:(BOOL)animated {
     [self.navigationController setNavigationBarHidden:NO animated:animated];
-//    self.tableView = self.myView.nodeTable;
+    [self.navigationController setToolbarHidden:YES animated:animated];
+    
+    // Make sure the nodeTable is aligned with the navigation bar properly.
+        // ADD THIS PROPERLY WHEN SUPPORTING LANDSCAPE!
+    
+        // Attempt 1
+//    float con = self.navigationController.navigationBar.frame.size.height;
+//    [self.myView.nodeTable setFrame:CGRectMake(self.myView.nodeTable.frame.origin.x,
+//                                              self.myView.nodeTable.frame.origin.y + con,
+//                                              self.myView.nodeTable.frame.size.width,
+//                                              self.myView.nodeTable.frame.size.height - con)];
+        // Attempt 2
+//    NSLayoutConstraint *c = [NSLayoutConstraint constraintWithItem:self.myView.nodeTable
+//                                                         attribute:NSLayoutAttributeTop
+//                                                         relatedBy:NSLayoutRelationEqual
+//                                                            toItem:self.myView
+//                                                         attribute:NSLayoutAttributeTop
+//                                                        multiplier:0
+//                                                          constant:con];
+//    [self.myView.nodeTable addConstraint:c];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -290,13 +309,13 @@ UIAlertView *alert;
     NSLog(@">>> Recognizer started recording!");
     
     // Moved the following code to the button press.
-//    alert =[[UIAlertView alloc] initWithTitle:@"Listening..."
-//                                      message:nil
-//                                     delegate:self
-//                            cancelButtonTitle:@"Cancel"
-//                            otherButtonTitles:@"Done", nil];
-//    [alert setTag:ALERT_REC];
-//    [alert show];
+    alert =[[UIAlertView alloc] initWithTitle:@"Listening..."
+                                      message:nil
+                                     delegate:self
+                            cancelButtonTitle:@"Cancel"
+                            otherButtonTitles:@"Done", nil];
+    [alert setTag:ALERT_REC];
+    [alert show];
     //    alert.cancelButtonIndex = 0;
 }
 
@@ -469,14 +488,14 @@ UIAlertView *alert;
 - (IBAction)addNodeButtonPressed:(id)sender {
     NSLog(@"V: Add node pressed");
     
-    alert =[[UIAlertView alloc] initWithTitle:@"Listening..."
-                                      message:nil
-                                     delegate:self
-                            cancelButtonTitle:@"Cancel"
-                            otherButtonTitles:@"Done", nil];
-    [alert setTag:ALERT_REC];
-//    [alert addSubview:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Nuancelogo_dark_144x72.png"]]];
-    [alert show];
+//    alert =[[UIAlertView alloc] initWithTitle:@"Listening..."
+//                                      message:nil
+//                                     delegate:self
+//                            cancelButtonTitle:@"Cancel"
+//                            otherButtonTitles:@"Done", nil];
+//    [alert setTag:ALERT_REC];
+////    [alert addSubview:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Nuancelogo_dark_144x72.png"]]];
+//    [alert show];
     self.recognizer = [[SKRecognizer alloc] initWithType:SKDictationRecognizerType
                                                detection:SKShortEndOfSpeechDetection
                                                 language:@"en_US"

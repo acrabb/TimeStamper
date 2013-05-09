@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "EventNode.h"
 #import "NodeDetailView.h"
+#import <Social/Social.h>
+#import <Social/Social.h>
 #import "EventViewController.h"
 #import <MobileCoreServices/UTCoreTypes.h>
 
@@ -25,5 +27,6 @@
 
 - (id)initWithNode:(EventNode*)node;
 - (void)receiveSegueNode:(EventNode*) node andVC:(EventViewController *)vc;
+- (IBAction)socialButtonTapped:(id)sender;
 
 @end

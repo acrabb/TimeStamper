@@ -44,6 +44,7 @@
 		6571FCEA1714FBFA0054085C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6571FCE91714FBFA0054085C /* SystemConfiguration.framework */; };
 		657A4D9C173A651600BD560F /* rectangle_darkwhite_154x48.png in Resources */ = {isa = PBXBuildFile; fileRef = 657A4D9B173A651600BD560F /* rectangle_darkwhite_154x48.png */; };
 		65986992171E21E900F1C884 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 65986991171E21E900F1C884 /* camera.png */; };
+		65987C2A173AD5B200A246DA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65987C29173AD5B200A246DA /* Social.framework */; };
 		659C338D1720D1A800E7923C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 659C338C1720D1A800E7923C /* MobileCoreServices.framework */; };
 		65C35730173A586B00B3DF19 /* Nuancelogo_dark_144x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 65C3572E173A586B00B3DF19 /* Nuancelogo_dark_144x72.png */; };
 /* End PBXBuildFile section */
@@ -109,6 +110,7 @@
 		6571FCE91714FBFA0054085C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		657A4D9B173A651600BD560F /* rectangle_darkwhite_154x48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rectangle_darkwhite_154x48.png; sourceTree = "<group>"; };
 		65986991171E21E900F1C884 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
+		65987C29173AD5B200A246DA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		659C338C1720D1A800E7923C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		65C3572E173A586B00B3DF19 /* Nuancelogo_dark_144x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Nuancelogo_dark_144x72.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65987C2A173AD5B200A246DA /* Social.framework in Frameworks */,
 				659C338D1720D1A800E7923C /* MobileCoreServices.framework in Frameworks */,
 				6571FCEA1714FBFA0054085C /* SystemConfiguration.framework in Frameworks */,
 				6571FCE81714FBE30054085C /* AVFoundation.framework in Frameworks */,
@@ -164,7 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				655301F71738B8CE0096C9D0 /* images */,
-				659C338C1720D1A800E7923C /* MobileCoreServices.framework */,
 				6571FC981714FB4E0054085C /* TimeStamper */,
 				6571FCBC1714FB4F0054085C /* TimeStamperTests */,
 				6571FC911714FB4E0054085C /* Frameworks */,
@@ -184,6 +186,8 @@
 		6571FC911714FB4E0054085C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				65987C29173AD5B200A246DA /* Social.framework */,
+				659C338C1720D1A800E7923C /* MobileCoreServices.framework */,
 				6571FCE91714FBFA0054085C /* SystemConfiguration.framework */,
 				6571FCE71714FBE30054085C /* AVFoundation.framework */,
 				6571FCE51714FBD90054085C /* CFNetwork.framework */,

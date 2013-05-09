@@ -7,11 +7,15 @@
         <!--Navigation Controller-->
         <scene sceneID="v0W-aa-Ahz">
             <objects>
-                <navigationController definesPresentationContext="YES" id="2Wb-LW-sk9" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" toolbarHidden="NO" id="2Wb-LW-sk9" sceneMemberID="viewController">
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" id="S4Z-TQ-tho">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" id="xxJ-ZK-lGx">
+                        <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="Yi9-nM-glW" kind="relationship" relationship="rootViewController" id="oFs-6N-GQe"/>
                     </connections>
@@ -108,6 +112,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VYL-Y3-myn">
                                 <constraints>
                                     <constraint firstAttribute="height" priority="1" constant="354" type="user" id="YQ6-cW-E9q"/>
+                                    <constraint firstAttribute="height" constant="355" id="rf4-y4-IrZ"/>
                                 </constraints>
                                 <color key="separatorColor" red="0.043137256059999997" green="0.7607843876" blue="0.92549026010000002" alpha="1" colorSpace="deviceRGB"/>
                                 <prototypes>
@@ -156,7 +161,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="VYL-Y3-myn" firstAttribute="top" secondItem="kaD-kE-8AV" secondAttribute="top" constant="38" type="user" id="EZZ-3I-2v1"/>
                             <constraint firstItem="VYL-Y3-myn" firstAttribute="leading" secondItem="kaD-kE-8AV" secondAttribute="leading" type="default" id="JCo-Yq-UvW"/>
                             <constraint firstItem="VYL-Y3-myn" firstAttribute="trailing" secondItem="kaD-kE-8AV" secondAttribute="trailing" type="default" id="Lyo-CU-7eu"/>
                             <constraint firstItem="uZg-cT-9bc" firstAttribute="bottom" secondItem="kaD-kE-8AV" secondAttribute="bottom" type="default" id="OZu-gf-cqM"/>
@@ -288,11 +292,11 @@
                                     <constraint firstItem="Ral-Vx-xEL" firstAttribute="leading" secondItem="xQ1-cm-kCg" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="8oO-HU-UHC"/>
                                     <constraint firstItem="rX9-Cf-8wL" firstAttribute="leading" secondItem="xQ1-cm-kCg" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Djr-f0-V3h"/>
                                     <constraint firstItem="1ib-G0-r5K" firstAttribute="top" secondItem="LXN-3X-zh3" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Ipp-MD-MdS"/>
+                                    <constraint firstAttribute="bottom" secondItem="1ib-G0-r5K" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="IrA-d0-4Ey"/>
                                     <constraint firstItem="LXN-3X-zh3" firstAttribute="leading" secondItem="xQ1-cm-kCg" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="L4d-fv-znY"/>
                                     <constraint firstItem="rX9-Cf-8wL" firstAttribute="centerX" secondItem="xQ1-cm-kCg" secondAttribute="centerX" type="default" id="LIF-xl-tX8"/>
                                     <constraint firstItem="LXN-3X-zh3" firstAttribute="top" secondItem="rX9-Cf-8wL" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="RME-oT-Y5c"/>
                                     <constraint firstItem="rX9-Cf-8wL" firstAttribute="top" secondItem="Ral-Vx-xEL" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="UgX-rS-1uM"/>
-                                    <constraint firstAttribute="bottom" secondItem="LXN-3X-zh3" secondAttribute="bottom" constant="210" id="eiB-B9-VVf"/>
                                     <constraint firstItem="1ib-G0-r5K" firstAttribute="leading" secondItem="xQ1-cm-kCg" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="msP-x3-LJW"/>
                                     <constraint firstAttribute="trailing" secondItem="1ib-G0-r5K" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="sUo-Ti-aub"/>
                                     <constraint firstItem="Ral-Vx-xEL" firstAttribute="top" secondItem="xQ1-cm-kCg" secondAttribute="top" constant="20" symbolic="YES" type="default" id="w2r-kp-18X"/>
@@ -305,8 +309,8 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="xQ1-cm-kCg" firstAttribute="top" secondItem="Yem-RF-B2N" secondAttribute="top" constant="44" id="ZaB-EU-vQ4"/>
-                            <constraint firstItem="xQ1-cm-kCg" firstAttribute="bottom" secondItem="Yem-RF-B2N" secondAttribute="bottom" type="default" id="jK8-O3-tzo"/>
+                            <constraint firstItem="xQ1-cm-kCg" firstAttribute="top" secondItem="Yem-RF-B2N" secondAttribute="top" constant="44" id="FTp-bY-Zws"/>
+                            <constraint firstItem="xQ1-cm-kCg" firstAttribute="centerY" secondItem="Yem-RF-B2N" secondAttribute="centerY" type="default" id="a6G-FJ-si7"/>
                             <constraint firstItem="xQ1-cm-kCg" firstAttribute="trailing" secondItem="Yem-RF-B2N" secondAttribute="trailing" type="default" id="t7q-Nz-hH7"/>
                             <constraint firstItem="xQ1-cm-kCg" firstAttribute="leading" secondItem="Yem-RF-B2N" secondAttribute="leading" type="default" id="yQy-Rh-BTj"/>
                         </constraints>
@@ -360,52 +364,6 @@
         <image name="camera.png" width="128" height="128"/>
         <image name="rectangle_darkwhite_154x48.png" width="154" height="48"/>
     </resources>
-    <classes>
-        <class className="EventView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EventView.h"/>
-            <relationships>
-                <relationship kind="outlet" name="myController" candidateClass="EventViewController"/>
-                <relationship kind="outlet" name="nodeTable" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="EventViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EventViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addNodeButtonPressed:"/>
-                <relationship kind="action" name="menuButtonPressed:"/>
-                <relationship kind="outlet" name="initialDateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="initialTimeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="myView" candidateClass="EventView"/>
-                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="EventsTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EventsTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="helpButtonTapped:"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="NodeDetailView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NodeDetailView.h"/>
-            <relationships>
-                <relationship kind="outlet" name="myController" candidateClass="NodeDetailViewController"/>
-                <relationship kind="outlet" name="notesView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="photoView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="timeLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="NodeDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NodeDetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="imageViewTapped:"/>
-                <relationship kind="outlet" name="myView" candidateClass="NodeDetailView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

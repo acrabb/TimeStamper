@@ -41,6 +41,8 @@ NSString *INFO_MESSAGE = @"TimeStamper is an app to remember what you did! Just 
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Paper-1.png"]];
     self.tableView.backgroundView = imageView;
     
+    // Set up infoButton
+//    UIBarButtonItem *infoButton = self.navigationItem.leftBarButtonItem;
     UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
     [infoButton addTarget:self
                    action:@selector(helpButtonTapped:)
@@ -63,6 +65,7 @@ NSString *INFO_MESSAGE = @"TimeStamper is an app to remember what you did! Just 
 //-------------------------------------------------------------------------------------------
 - (void)viewWillAppear:(BOOL)animated {
     [self.navigationController setNavigationBarHidden:NO animated:animated];
+    [self.navigationController setToolbarHidden:YES animated:animated];
     [self.tableView reloadData];
 }
 

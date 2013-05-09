@@ -27,21 +27,12 @@
 }
 
 - (void) updateTable {
-//    [self.nodeTable setContentOffset:CGPointMake(0, CGFLOAT_MAX)];
-//    UITableViewScrollPositionBottom
     [self.nodeTable reloadData];
-    
-    NSIndexPath *scrollIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.nodeTable scrollToRowAtIndexPath:scrollIndexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
-
-    //    NSIndexPath *path = [[NSIndexPath alloc] init];
-    
-    
-    //    cell.textLabel.text = @"YAYYY!";
-    //    cell.backgroundColor = [UIColor redColor];
-    ////    [self.nodeTable addSubview:cell];
-    //    [self.nodeTable insertSubview:cell atIndex:nextCount];
-    //    nextCount++;
+    NSIndexPath *scrollIndexPath = [NSIndexPath indexPathForRow:0
+                                                      inSection:0];
+    [self.nodeTable scrollToRowAtIndexPath:scrollIndexPath
+                          atScrollPosition:UITableViewScrollPositionBottom
+                                  animated:YES];
 }
 
 

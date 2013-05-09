@@ -15,6 +15,7 @@
 @synthesize notesView       = _notesView;
 @synthesize photoView       = _photoView;
 @synthesize timeLabel       = _timeLabel;
+@synthesize toolbar         = _toolbar;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -37,11 +38,6 @@
     NSLog(@">Detail> Setting photo.");
     [self.photoView setImage:photo];
     
-    
-//    [self.photoView setNeedsLayout];
-//    [self.photoView setNeedsDisplay];
-//    [self.photoView sizeToFit];
-
     
     /*/
 //    UIImage * img = [UIImage imageNamed:@"someImage.png"];
